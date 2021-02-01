@@ -1,15 +1,15 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity, Text, View, Button } from "react-native";
+import { StyleSheet, TouchableOpacity, Text, View, Button,Alert } from "react-native";
 
 export const Exercise3 = ({ navigation }) => {
   return (
     <>
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => alert("hello")}>
+        <TouchableOpacity onPress={() => Alert.alert("hello")}>
           <Text style={styles.buttonHello}>Say hello</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => alert("goodbye")}>
+        <TouchableOpacity onPress={() => Alert.alert("goodbye")}>
           <Text style={styles.buttonGoodbye}>Say goodbye</Text>
         </TouchableOpacity>
       </View>

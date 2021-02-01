@@ -1,9 +1,9 @@
 import React from "react";
-import { StyleSheet, View, Button } from "react-native";
+import { StyleSheet, View, Button ,Alert} from "react-native";
 
 export const Exercise2 = ({ navigation }) => {
   const handlePress = () => {
-    alert("hello!");
+    Alert.alert("hello!");
   };
   return (
     <View style={styles.container}>

@@ -7,6 +7,7 @@ import {
   ImageBackground,
   Image,
   TouchableOpacity,
+  Alert
 } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 
@@ -16,11 +17,9 @@ export const Login = () => {
 
   const handlePress = () => {
     if (email != "" && password != "") {
-      if (email.email === "Mahie@x.com" && password.password === "test") {
-        alert("Successfull");
+        Alert.alert("Successfull");
       } else {
-        alert("Please enter correct Email and Password");
-      }
+        Alert.alert("Please enter correct Email and Password");
     }
   };
   return (
@@ -36,9 +35,12 @@ export const Login = () => {
         <View style={styles.inputContainer}>
           <TextInput
             style={styles.input}
-            placeholder="Emails"
+            placeholder="Email"
             value={email}
-            onChangeText={(text) => setEmail({ email: text })}
+            onChangeText={(email) => setEmail(email)}
+            autoComplete={false}
+            autoCorrect={false}
+            spellCheck={false}
           />
           <MaterialIcons
             style={styles.inputIcon}
@@ -53,8 +55,11 @@ export const Login = () => {
             placeholder={"Password"}
             secureTextEntry={true}
             value={password}
-            onChangeText={(text) => setPassword({ password: text })}
-          />
+            onChangeText={(password) => setPassword( password)}
+            autoComplete={false}
+            autoCorrect={false}
+            spellCheck={false}
+         />
 
           <MaterialIcons
             style={styles.inputIcon}

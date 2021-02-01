@@ -5,6 +5,7 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
+  Alert
 } from "react-native";
 
 export const Exercise5 = () => {
@@ -17,7 +18,7 @@ export const Exercise5 = () => {
         placeholder="John Deo"
         onChangeText={(value) => setName(value)}
       />
-      <TouchableOpacity onPress={() => alert("Hello " + name)}>
+      <TouchableOpacity onPress={() => Alert.alert("Hello " + name)}>
         <Text style={styles.buttonText}>Say hello</Text>
       </TouchableOpacity>
     </View>
